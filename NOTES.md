@@ -16,7 +16,7 @@ cmake --build build_debug --config Debug --target INSTALL (install)
 # release build
 mkdir build_release
 cmake -B .\build_release\ -G "Visual Studio 17 2022" -A x64 -DCMAKE_BUILD_TYPE=Release -DBUILD_PYTHON_MODULE=OFF -DBUILD_CUDA_MODULE=OFF -DBUILD_BENCHMARKS=ON -DBUILD_UNIT_TESTS=ON -DCMAKE_INSTALL_PREFIX="C:/DevTools/open3d_lib/open3d_rel"
-cmake --build build_release --config Release --parallel 16 --target ALL_BUILD (build)
+cmake --build build_release --config Release --parallel 8 --target ALL_BUILD (build)
 cmake --build build_release --config Release --target INSTALL (install)
 ```
 
@@ -52,3 +52,10 @@ make install (install)
   - By default DEVELOPER_BUILD=ON in the CMakeLists.txt
 
 - [Build from source guide](https://www.open3d.org/docs/release/compilation.html#)
+
+
+- The stitcher app:
+  - source dir: ./stitcher
+  - executable dir: 
+    * Windows: .\build_release\bin\stitcher\Release\stitcher.exe
+    * Linux  : .\build_release\bin\stitcher\stitcher.exe

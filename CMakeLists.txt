@@ -512,6 +512,9 @@ add_subdirectory(cpp)
 # Examples
 add_subdirectory(examples)
 
+# My stitcher code
+add_subdirectory(stitcher)
+
 # Documentation
 add_subdirectory(docs)
 
